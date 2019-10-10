@@ -1,10 +1,9 @@
 $(document).ready(function () {
-    $(window).scroll(function () { 
-        var pos=$(window).scrollTop();
-        if (pos>20) {
+    $(window).scroll(function () {
+        var pos = $(window).scrollTop();
+        if (pos > 20) {
             $('#header').addClass('scrollHeader');
-        }
-        else {
+        } else {
             $('#header').removeClass('scrollHeader');
         }
     });

@@ -80,6 +80,10 @@ header .container nav .nav-list .nav-item .nav-link:hover, header .container nav
 
 .active {
   color: #e8491d !important;
+  border-bottom: 2px solid #e8491d;
+  color: #e8491d;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
 }
 
 #banner {
