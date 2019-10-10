@@ -1,0 +1,420 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #35424a !important;
+  width: 100%;
+  height: 10rem;
+  border-bottom: 5px solid #e8491d;
+}
+
+header .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container #logo a {
+  color: white;
+}
+
+header .container #logo a:hover {
+  text-decoration: none;
+}
+
+header .container #logo a h1 {
+  font-size: 3em;
+}
+
+header .container nav {
+  padding: 1rem 0 0 0;
+}
+
+header .container nav .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container nav .nav-list .nav-item .nav-link {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0 2rem;
+  padding: 1rem 0rem 1rem 0;
+}
+
+header .container nav .nav-list .nav-item .nav-link:hover, header .container nav .nav-list .nav-item .nav-link:active {
+  border-bottom: 2px solid #e8491d;
+  color: #e8491d;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.scrollHeader {
+  height: 7rem;
+  position: fixed;
+  -webkit-transition: 0.8s all ease;
+  transition: 0.8s all ease;
+  top: 0;
+  left: 0;
+}
+
+.active {
+  color: #e8491d !important;
+}
+
+#banner {
+  background-image: url("../image/showcase.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+#banner .container {
+  padding: 15% 0 0 0;
+}
+
+#banner .container .banner-tittle {
+  font-size: 5rem;
+  margin-bottom: 5rem;
+}
+
+#banner .container .banner-content {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+#banner .container .banner-btn {
+  border: 0;
+  background: #e8491d;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 400;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#contact {
+  background: #35424a;
+  color: white;
+  width: 100%;
+  height: 10rem;
+}
+
+#contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#contact .container .contact-tittle {
+  font-size: 2.5rem;
+}
+
+#contact .container .contact-content input {
+  font-size: 1.8rem;
+  padding: 0.2rem 0.5rem 0.2rem 2rem;
+  border-radius: 5px;
+}
+
+#contact .container .contact-content input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+#contact .container .contact-content input:-ms-input-placeholder {
+  font-style: italic;
+}
+
+#contact .container .contact-content input::-ms-input-placeholder {
+  font-style: italic;
+}
+
+#contact .container .contact-content input::placeholder {
+  font-style: italic;
+}
+
+#contact .container .contact-content button {
+  background: #e8491d;
+  border: 0;
+  font-size: 1.8rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+#main {
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+}
+
+#main .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#main .container .main-item {
+  text-align: center;
+  padding: 0 2rem;
+  width: auto;
+  height: auto;
+}
+
+#main .container .main-item-img {
+  max-width: 40%;
+  padding: 0 0 2rem 0;
+}
+
+#main .container .main-item-tittle {
+  padding: 0 0 2rem 0;
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+#main .container .main-item-content {
+  font-size: 1.8rem;
+}
+
+#about {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+#about .container {
+  font-size: 1.8rem;
+}
+
+#about .container .about-left {
+  width: 60%;
+  float: left;
+}
+
+#about .container .about-left-tittle {
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+#about .container .about-left-content:nth-child(2) {
+  background: #35424a;
+  color: white;
+  padding: 2rem;
+}
+
+#about .container .about-right {
+  width: 30%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2rem;
+  color: white;
+  margin-left: 10%;
+  float: right;
+  background: #35424a;
+}
+
+#about .container .about-right-tittle {
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+#services {
+  width: 100%;
+  font-size: 1.8rem;
+  margin: 3rem 0;
+}
+
+#services .container .services-left {
+  float: left;
+  width: 60%;
+}
+
+#services .container .services-left-tittle {
+  font-size: 2.5rem;
+}
+
+#services .container .services-left-box {
+  background: #e6e6e6;
+  padding: 3rem 2rem;
+  margin-bottom: 1rem;
+}
+
+#services .container .services-left-box-tittle {
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+#services .container .services-right {
+  color: white;
+  width: 30%;
+  float: right;
+  margin-left: 10%;
+  background: #35424a;
+  padding: 0.5rem 2rem;
+}
+
+#services .container .services-right-tittle {
+  font-size: 2.5rem;
+}
+
+#services .container .services-right form input {
+  width: 100%;
+}
+
+#services .container .services-right form input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+#services .container .services-right form input:-ms-input-placeholder {
+  font-style: italic;
+}
+
+#services .container .services-right form input::-ms-input-placeholder {
+  font-style: italic;
+}
+
+#services .container .services-right form input::placeholder {
+  font-style: italic;
+}
+
+#services .container .services-right form textarea {
+  width: 100%;
+}
+
+#services .container .services-right form textarea::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+#services .container .services-right form textarea:-ms-input-placeholder {
+  font-style: italic;
+}
+
+#services .container .services-right form textarea::-ms-input-placeholder {
+  font-style: italic;
+}
+
+#services .container .services-right form textarea::placeholder {
+  font-style: italic;
+}
+
+#services .container .services-right form button {
+  margin-top: 1rem;
+  border: 0;
+  background: #e8491d;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+#footer {
+  clear: both;
+  background: #e8491d;
+  width: 100%;
+  height: 10rem;
+}
+
+#footer p {
+  text-align: center;
+  color: white;
+  line-height: 10rem;
+  font-size: 1.7rem;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 56.2%;
+  }
+  header .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  header .container #logo {
+    text-align: center;
+  }
+  .scrollHeader {
+    height: 10rem;
+  }
+  #main .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #contact .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  #contact .container form input {
+    width: 80%;
+  }
+  #services .container .services-left, #services .container .services-right {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  #services .container .services-right form button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+  #contact {
+    height: 20rem;
+  }
+  #contact .container form input {
+    width: 100%;
+  }
+  #contact .container form button {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  #about .container .about-left, #about .container .about-right {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

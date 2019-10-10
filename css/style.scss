@@ -1,0 +1,431 @@
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin centerAbsolute($pos) {
+    position: absolute;
+
+    @if $pos=="both" {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @else if $pos=="left" {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @else if $pos=="top" {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+$heading:#35424a;
+$active:#e8491d;
+$services:#e6e6e6;
+
+//Reset Css
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: $heading !important;
+    width: 100%;
+    height: 10rem;
+    border-bottom: 5px solid $active;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #logo {
+            a {
+                color: white;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                h1 {
+                    font-size: 3em;
+                }
+            }
+        }
+
+        nav {
+            padding: 1rem 0 0 0;
+
+            .nav-list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .nav-item {
+                    .nav-link {
+                        color: white;
+                        font-size: 1.8rem;
+                        margin: 0 2rem;
+                        padding: 1rem 0rem 1rem 0;
+
+                        &:hover,
+                        &:active {
+                            border-bottom: 2px solid $active;
+                            color: $active;
+                            transition: 0.5s all ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.scrollHeader {
+    height: 7rem;
+    position: fixed;
+    transition: 0.8s all ease;
+    top: 0;
+    left: 0;
+}
+
+.active {
+    color: $active !important;
+}
+
+#banner {
+    background-image: url('../image/showcase.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    text-align: center;
+
+    .container {
+        padding: 15% 0 0 0;
+
+        .banner-tittle {
+            font-size: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .banner-content {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+
+        }
+
+        .banner-btn {
+            border: 0;
+            background: $active;
+            padding: 1rem 2rem;
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 400;
+            border-radius: 4px;
+            box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.4);
+
+        }
+    }
+}
+
+#contact {
+    background: $heading;
+    color: white;
+
+    @include size(100%, 10rem);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        .contact-tittle {
+            font-size: 2.5rem;
+        }
+
+        .contact-content {
+            input {
+                font-size: 1.8rem;
+                padding: 0.2rem 0.5rem 0.2rem 2rem;
+                border-radius: 5px;
+
+                &::placeholder {
+                    font-style: italic;
+                }
+            }
+
+            button {
+                background: $active;
+                border: 0;
+                font-size: 1.8rem;
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+            }
+        }
+
+    }
+}
+
+#main {
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        justify-content: space-between;
+
+        .main-item {
+            text-align: center;
+            padding: 0 2rem;
+            @include size(auto, auto);
+
+            &-img {
+                max-width: 40%;
+                padding: 0 0 2rem 0;
+            }
+
+            &-tittle {
+                padding: 0 0 2rem 0;
+                font-weight: bold;
+                font-size: 2.4rem;
+            }
+
+            &-content {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+#about {
+    width: 100%;
+    padding: 2rem 0;
+
+    .container {
+        font-size: 1.8rem;
+
+        .about-left {
+            width: 60%;
+            float: left;
+
+            &-tittle {
+                font-size: 2.5rem;
+                padding-bottom: 2rem;
+            }
+
+            &-content {
+                &:nth-child(2) {
+                    background: $heading;
+                    color: white;
+                    padding: 2rem;
+                }
+            }
+        }
+
+        .about-right {
+            width: 30%;
+            box-sizing: border-box;
+            padding: 2rem;
+            color: white;
+            margin-left: 10%;
+            float: right;
+            background: $heading;
+
+            &-tittle {
+                font-size: 2.5rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+}
+
+#services {
+    width: 100%;
+    font-size: 1.8rem;
+    margin: 3rem 0;
+
+    .container {
+        .services-left {
+            float: left;
+            width: 60%;
+
+            &-tittle {
+                font-size: 2.5rem;
+            }
+
+            &-box {
+                background: $services;
+                padding: 3rem 2rem;
+                margin-bottom: 1rem;
+
+                &-tittle {
+                    font-size: 2.5rem;
+                    padding-bottom: 2rem;
+                }
+
+                &-content {}
+            }
+        }
+
+        .services-right {
+            color: white;
+            width: 30%;
+            float: right;
+            margin-left: 10%;
+            background: $heading;
+            padding: 0.5rem 2rem;
+
+            &-tittle {
+                font-size: 2.5rem;
+            }
+
+            form {
+                input {
+                    width: 100%;
+
+                    &::placeholder {
+                        font-style: italic;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+
+                    &::placeholder {
+                        font-style: italic;
+                    }
+
+                }
+
+                button {
+                    margin-top: 1rem;
+                    border: 0;
+                    background: $active;
+                    color: white;
+                    padding: 0.5rem 2rem;
+                    border-radius: 5px;
+                    box-shadow: 2px 2px rgba($color: #000000, $alpha: 0.4)
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    clear: both;
+    background: $active;
+    @include size(100%, 10rem);
+    p {
+        text-align: center;
+        color: white;
+        line-height: 10rem;
+        font-size: 1.7rem;
+
+    }
+}
+
+@media (max-width:800px) {
+    html {
+        font-size: 56.2%;
+    }
+
+    header {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            #logo {
+                text-align: center;
+            }
+        }
+    }
+
+    .scrollHeader {
+        height: 10rem;
+    }
+
+    #main {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+    #contact{
+        .container{
+            display: grid;
+            grid-template-columns: 1fr;
+            text-align: center;
+            form{
+                input{
+                    width:80%;
+                }
+            }    
+        }
+    }
+    #services{
+        .container{
+            .services-left,.services-right{
+                width: 100%;
+                margin-bottom: 2rem;
+            }   
+            .services-right{
+                form{
+                    button{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            } 
+        }
+    }
+}
+@media (max-width:500px){
+    html{
+        font-size:50%;
+    }
+    #contact{
+        height: 20rem;;
+        .container{
+            form{
+                input{
+                    width: 100%;
+                }
+                button{
+                    margin-top:1rem;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #about{
+        .container{
+            .about-left,.about-right{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
